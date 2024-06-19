@@ -1,7 +1,7 @@
 function calc() {
-    let number1 = parseFloat(document.getElementById("firstNumber").value);
-    let number2 = parseFloat(document.getElementById("secondNumber").value);
-    let result = number1 + number2;
-    console.log("Result: " + result);
+    let number1 = document.getElementById("firstNumber").value;
+    let number2 =document.getElementById("secondNumber").value;
+    let result = parseInt(number1) + parseInt(number2);
+    output.innerHTML=result;
 
   }
