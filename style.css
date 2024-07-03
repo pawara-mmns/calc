@@ -1,0 +1,125 @@
+body, h1, h2, h3, p, table {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+input[type="text"], input[type="button"] {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    font-size: 16px;
+}
+input[type="button"] {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #333;
+}
+#countryDetails {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-decoration: underline;
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+h3 {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+#img img {
+    width: 100px;
+    height: auto;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+table {
+    width: 80%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background: #fff;
+    color: #000;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #000;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    h1, h2, h3 {
+        font-size: 20px;
+    }
+
+    input[type="text"], input[type="button"] {
+        font-size: 14px;
+    }
+
+    #img img {
+        width: 80px;
+    }
+}

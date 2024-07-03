@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Country Info</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <input type="text" id="txtSearchValue" placeholder="Enter country name">
+    <input type="button" value="Search" onclick="serchCuntrie()">
+
+    <div id="countryDetails">
+        <h1>Country Details</h1>
+        <h2 id="offitalName">Official Name</h2>
+        <h3 id="name">Common Name</h3>
+        <div id="img"></div>
+        <p id="population">Population: </p>
+        <p id="region">Region: </p>
+        <p id="subregion">Subregion: </p>
+        <p id="capital">Capital: </p>
+        <p id="googleMaps">Google Maps: <a href="" target="_blank" id="mapsLink">View on Google Maps</a></p>
+    </div>
+
     <table id="tbl"></table>
+
     <script src="app.js"></script>
 </body>
 </html>
