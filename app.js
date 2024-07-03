@@ -1,8 +1,11 @@
+let countries = [];
+
 fetch("https://restcountries.com/v3.1/all")
     .then(res => res.json())
     .then(data => {
         data.sort((a, b) => a.name.common.localeCompare(b.name.common));
-        
+        countries = data;
+
         let tblCountries = document.getElementById("tbl");
 
         let tblBody = `<tr>
@@ -41,4 +44,24 @@ function displayCountryDetails(countryName) {
 function serchCuntrie() {
     let searchValue = document.getElementById("txtSearchValue").value;
     displayCountryDetails(searchValue);
+}
+
+function autoSuggest() {
+    let searchValue = document.getElementById("txtSearchValue").value.toLowerCase();
+    let suggestions = document.getElementById("suggestions");
+    suggestions.innerHTML = "";
+
+    if (searchValue.length > 0) {
+        let filteredCountries = countries.filter(country => country.name.common.toLowerCase().startsWith(searchValue));
+        filteredCountries.forEach(country => {
+            let div = document.createElement("div");
+            div.innerHTML = country.name.common;
+            div.onclick = () => {
+                document.getElementById("txtSearchValue").value = country.name.common;
+                suggestions.innerHTML = "";
+                displayCountryDetails(country.name.common);
+            };
+            suggestions.appendChild(div);
+        });
+    }
 }

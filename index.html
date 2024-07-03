@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input type="text" id="txtSearchValue" placeholder="Enter country name">
+    <input type="text" id="txtSearchValue" placeholder="Enter country name" oninput="autoSuggest()">
+    <div id="suggestions"></div>
     <input type="button" value="Search" onclick="serchCuntrie()">
 
     <div id="countryDetails">
